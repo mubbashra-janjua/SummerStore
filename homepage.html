@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NovaSoft — Software House</title>
+  <meta name="description" content="Custom software, web apps, and mobile solutions. Explore our services, work, and contact us for a quote." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Link your separate CSS file -->
+  <link rel="stylesheet" href="css/universal.css" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand" aria-label="NovaSoft Home">
+        <span class="brand__logo" aria-hidden="true">◆</span>
+        <span class="brand__text">NovaSoft</span>
+      </a>
+      <nav class="nav" aria-label="Primary Navigation">
+        <ul class="nav__list">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#careers">Careers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary btn--small" href="#contact">Get a quote</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <h1>We design & build reliable software that scales</h1>
+        <p>
+          From idea to production: web apps, mobile, and cloud-native platforms.
+          Our team ships fast, tests thoroughly, and obsesses over UX.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#work">See our work</a>
+          <a class="btn btn--ghost" href="#services">What we do</a>
+        </div>
+        <ul class="hero__stats" role="list">
+          <li><strong>120+</strong> projects delivered</li>
+          <li><strong>35</strong> engineers & designers</li>
+          <li><strong>98%</strong> client satisfaction</li>
+        </ul>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <!-- Simple illustrative placeholder -->
+        <svg viewBox="0 0 400 300" class="hero__svg" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0%" stop-color="currentColor" stop-opacity="0.15"/>
+              <stop offset="100%" stop-color="currentColor" stop-opacity="0.05"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="400" height="300" rx="16" fill="url(#g)"/>
+          <g stroke="currentColor" stroke-opacity="0.25" fill="none">
+            <rect x="30" y="30" width="160" height="110" rx="10"/>
+            <rect x="210" y="30" width="160" height="60" rx="10"/>
+            <rect x="210" y="110" width="160" height="110" rx="10"/>
+            <rect x="30" y="160" width="160" height="60" rx="10"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container">
+      <header class="section__header">
+        <h2>Services</h2>
+        <p>Full‑stack product development from discovery to deployment.</p>
+      </header>
+      <div class="cards">
+        <article class="card">
+          <div class="card__icon" aria-hidden="true">⚙️</div>
+          <h3>Custom Software</h3>
+          <p>Robust backend systems, APIs, and dashboards tailored to your business.</p>
+          <ul class="list">
+            <li>Node.js / Python</li>
+            <li>Microservices & REST</li>
+            <li>Automated testing</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card__icon" aria-hidden="true">📱</div>
+          <h3>Mobile Apps</h3>
+          <p>iOS & Android apps with offline-first and delightful UX.</p>
+          <ul class="list">
+            <li>React Native / Flutter</li>
+            <li>CI/CD and analytics</li>
+            <li>App Store/Play submission</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card__icon" aria-hidden="true">☁️</div>
+          <h3>Cloud & DevOps</h3>
+          <p>Secure, scalable infrastructure with observability baked in.</p>
+          <ul class="list">
+            <li>AWS / GCP / Azure</li>
+            <li>Docker & Kubernetes</li>
+            <li>Monitoring & alerts</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card__icon" aria-hidden="true">🎨</div>
+          <h3>UI/UX Design</h3>
+          <p>Prototyping, design systems, and accessible interfaces.</p>
+          <ul class="list">
+            <li>Wireframes & flows</li>
+            <li>Design systems</li>
+            <li>Usability testing</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work / Portfolio -->
+  <section id="work" class="section section--alt">
+    <div class="container">
+      <header class="section__header">
+        <h2>Featured Work</h2>
+        <p>Recent projects we loved building.</p>
+      </header>
+      <div class="grid">
+        <a class="project" href="#" aria-label="Fintech Dashboard case study">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Fintech dashboard interface" />
+          <div class="project__meta">
+            <span class="badge">Fintech</span>
+            <h3>Realtime Analytics Platform</h3>
+          </div>
+        </a>
+        <a class="project" href="#" aria-label="Healthcare Mobile App case study">
+          <img src="https://images.unsplash.com/photo-1557825835-70d97c4aa567?q=80&w=800&auto=format&fit=crop" alt="Healthcare mobile app screens" />
+          <div class="project__meta">
+            <span class="badge">Health</span>
+            <h3>Patient Companion App</h3>
+          </div>
+        </a>
+        <a class="project" href="#" aria-label="Logistics Optimization case study">
+          <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=800&auto=format&fit=crop" alt="Logistics dashboard" />
+          <div class="project__meta">
+            <span class="badge">Logistics</span>
+            <h3>Route Optimization Engine</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Logos -->
+  <section id="about" class="section">
+    <div class="container about">
+      <div class="about__text">
+        <h2>From MVPs to enterprise platforms</h2>
+        <p>
+          We partner with startups and enterprises to ship secure, maintainable software.
+          Our cross‑functional teams embed with your product to deliver value quickly.
+        </p>
+        <ul class="bullets">
+          <li>Transparent communication & weekly demos</li>
+          <li>ISO‑aligned security practices</li>
+          <li>Timezone‑friendly collaboration</li>
+        </ul>
+      </div>
+      <div class="about__logos" aria-label="Trusted by">
+        <img src="https://dummyimage.com/140x40/DDD/111.png&text=Acme" alt="Acme logo" />
+        <img src="https://dummyimage.com/140x40/DDD/111.png&text=Globex" alt="Globex logo" />
+        <img src="https://dummyimage.com/140x40/DDD/111.png&text=Umbrella" alt="Umbrella Corp logo" />
+        <img src="https://dummyimage.com/140x40/DDD/111.png&text=Initech" alt="Initech logo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section section--alt">
+    <div class="container">
+      <header class="section__header">
+        <h2>What clients say</h2>
+        <p>Outcomes, not just output.</p>
+      </header>
+      <div class="testimonials">
+        <figure class="quote">
+          <blockquote>“NovaSoft delivered a complex platform ahead of schedule and within budget. Their communication was outstanding.”</blockquote>
+          <figcaption>— Ayesha Khan, Product Director at FinEdge</figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>“The team felt like an extension of our company. Exceptional code quality and UX craftsmanship.”</blockquote>
+          <figcaption>— Daniel Li, CTO at HealthBridge</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section id="contact" class="cta">
+    <div class="container cta__inner">
+      <h2>Have an idea? Let’s build it together.</h2>
+      <p>Tell us about your goals and we’ll get back within one business day.</p>
+      <a class="btn btn--primary" href="mailto:hello@novasoft.dev">Start a project</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#" class="brand brand--muted"><span class="brand__logo">◆</span><span class="brand__text">NovaSoft</span></a>
+        <p class="muted">© <span id="y"></span> NovaSoft. All rights reserved.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="footer__links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#careers">Careers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Update year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
