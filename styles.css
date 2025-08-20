@@ -1,0 +1,122 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+main {
+    padding: 2rem;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Home page styles */
+.home-section {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Portfolio page styles */
+.portfolio-section {
+    background-color: #e8ecef;
+    padding: 2rem;
+}
+
+.portfolio-section .project {
+    margin-bottom: 1rem;
+}
+
+/* Services page styles */
+.services-section {
+    background-color: #f9f9f9;
+    padding: 2rem;
+}
+
+.services-section ul {
+    list-style: disc;
+    margin-left: 2rem;
+}
+
+/* Blog page styles */
+.blog-section {
+    background-color: #e8ecef;
+    padding: 2rem;
+}
+
+.blog-section article {
+    margin-bottom: 1rem;
+}
+
+/* Contact page styles */
+.contact-section {
+    background-color: #f9f9f9;
+    padding: 2rem;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-section button {
+    padding: 0.5rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    background-color: #2980b9;
+}
