@@ -1,0 +1,105 @@
+:root {
+    --pad: 1rem;
+    --maxw: 1100px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: var(--pad);
+}
+
+.logo {
+    font-weight: 800;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    padding: 5rem var(--pad);
+    text-align: center;
+    background: #f5f5f5;
+}
+
+.section {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 2rem var(--pad);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.cards {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    padding: 1rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    background: white;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.1rem;
+    border-radius: 8px;
+    background: black;
+    color: white;
+}
+
+.form {
+    display: grid;
+    gap: 0.7rem;
+    max-width: 560px;
+}
+
+label {
+    display: grid;
+    gap: 0.35rem;
+}
+
+input,
+textarea {
+    padding: 0.6rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+}
+
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #555;
+}
