@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BRAINIC Login</title>
+  <link rel="stylesheet" href="../static/Login.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <h1><b>Welcome!</b></h1>
+      <p class="subtitle"><b>Enter your Credentials to access your account</b></p>
+
+      <form class="login-form">
+        <label for="email"><b>Email address</b></label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+
+        <div class="password-wrapper">
+          <label for="password"><b>Password</b></label>
+          <a href="#" class="forgot">forgot password</a>
+        </div>
+        <input type="password" id="password" placeholder="••••••••" required />
+
+        <!-- 🌟 Role Selection -->
+        <div class="form-group" style="margin: 15px 0;">
+          <label><input type="radio" name="role" value="patient" required> Patient</label>
+          <label><input type="radio" name="role" value="doctor"> Doctor</label>
+        </div>
+
+        <div class="remember">
+          <input type="checkbox" id="remember"/>
+          <label for="remember">Remember for 30 days</label>
+        </div>
+
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+
+      <div class="divider">or</div>
+
+      <div class="social-buttons">
+        <img src="../static/imgs/googleIcon.png" alt="Google Icon" />
+        <button class="google-btn">Sign in with Google</button>
+      </div>
+
+      <p class="signup-text">Don’t have an account? <a href="#">Sign Up</a></p>
+    </div>
+
+    <div class="right-panel">
+      <img src="../static/imgs/logo.png" alt="BRAINIC Logo" class="logo" />
+      <p class="tagline">
+        <b>Your</b> <span class="highlight"><b>trusted partner</b></span> <b>in digital healthcare.</b>
+      </p>
+    </div>
+  </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".login-form");
+    if (!form) {
+      console.error("Login form not found!");
+      return;
+    }
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const role = document.querySelector('input[name="role"]:checked').value;
+
+      try {
+        const response = await fetch("http://localhost:3000/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+body: JSON.stringify({ email, password })        });
+
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          localStorage.setItem("userEmail", email);
+
+          // ✅ Redirect based on role
+          if (role === "patient") {
+            window.location.href = "patientPortal.html";
+          } else if (role === "doctor") {
+            window.location.href = "DoctorPortal.html";
+          }
+        } else {
+          alert(result.message || "Login failed");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        alert("Something went wrong.");
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

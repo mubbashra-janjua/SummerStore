@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KLINIK Signup</title>
+  <link rel="stylesheet" href="../static/signupPatient.css" />
+</head>
+<body>
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <h2>Get Started Now</h2>
+    
+    
+    <form id="signupForm">
+  <label for="username"><b>Name</b></label>
+  <input type="text" id="username" name="username" placeholder="Name" required />
+
+  <label for="email"><b>Email Address</b></label>
+  <input type="email" id="email" name="email" placeholder="Email address" required />
+
+  <label for="password"><b>Password</b></label>
+  <input type="password" id="password" name="password" placeholder="Password" required />
+
+  <label class="terms">
+    <input type="checkbox" required />
+    I agree to the terms & policy
+  </label>
+
+  <button type="submit">Signup</button>
+</form>
+
+<script>
+  document.getElementById("signupForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = {
+      username: document.getElementById("username").value,
+      email: document.getElementById("email").value,
+      password: document.getElementById("password").value,
+    };
+
+    const response = await fetch("http://localhost:3000/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+    alert(result.message);
+  });
+</script>
+
+
+
+
+
+
+
+    </div>
+    <div class="right-panel">
+      <img src="../static/imgs/BRAINIC.png" alt="BRAINIC Logo" class="logo"/>
+      <p class="tagline"><b>Your</b> <span class="highlight"><b>trusted partner</b></span> <b>in digital healthcare.</b></p>
+    </div>
+  </div>
+  <script src="../static/signupPatient.js"></script>
+</body>
+</html>
+

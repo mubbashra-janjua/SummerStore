@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/style.css">
+  <title>Appointment Form</title>
+</head>
+<body>
+
+<h3>Appointment Form</h3>
+
+<section class="appointment-section">
+  <div class="container appointment-box">
+    <h2>Easily book an appointment in simple steps.</h2>
+
+    <!-- ✅ Fixed: added action, method, enctype -->
+      <form class="appointment-form" action="http://localhost:3000/submitAppointment" method="POST" enctype="multipart/form-data">
+
+      <div class="form-group">
+        <label for="email"><img src="../Static/icons/email.png" alt=""> Email Address</label>
+        <!-- ✅ Fixed: added name -->
+        <input type="email" id="email" name="email" readonly>
+      </div>
+
+      <div class="form-group">
+        <label for="contact"><img src="icons/phone.png" alt=""> Contact Number</label>
+        <!-- ✅ Fixed: added name -->
+        <input type="tel" id="contact" name="contact" placeholder="Enter Your Contact Number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="date"><img src="icons/calendar.png" alt=""> Date of Appointment</label>
+        <!-- ✅ Fixed: added name -->
+        <input type="date" id="date" name="date" required>
+      </div>
+
+      <div class="form-group full-width">
+        <label for="document"><img src="icons/upload.png" alt=""> Upload scans</label>
+        <!-- ✅ Fixed: added name -->
+        <input type="file" id="document" name="scan" accept=".png, .jpg, .jpeg" required />
+      </div>
+
+      <div class="form-button">
+        <!-- <button type="submit" class="btn primary">Book Now ✔</button> -->
+
+<button type="submit" class="btn primary">Book Now ✔</button>
+
+
+      </div>
+    </form>
+  </div>
+</section>
+
+
+<script>
+  const loggedInEmail = localStorage.getItem("userEmail");
+  document.getElementById("email").value = loggedInEmail;
+</script>
+
+
+</body>
+</html>
